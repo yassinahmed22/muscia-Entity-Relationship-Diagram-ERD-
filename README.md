@@ -1,7 +1,9 @@
 # muscia-Entity-Relationship-Diagram-ERD-
 Entity Relationship Diagram examples with solutions.
-
+ERD
 <img width="786" height="614" alt="musical" src="https://github.com/user-attachments/assets/f4cd9b52-8bc5-477f-a87d-14200805ef45" />
+MAPPING
+<img width="430" height="367" alt="bc" src="https://github.com/user-attachments/assets/ff396972-1b09-4565-b8a8-00d8e393c7ff" />
 
 Problem 1
 Musicana Records has decided to store information on musicians who perform on their albums in a database. 
