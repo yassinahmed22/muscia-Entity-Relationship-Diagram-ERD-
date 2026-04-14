@@ -1,7 +1,7 @@
 # muscia-Entity-Relationship-Diagram-ERD-
 Entity Relationship Diagram examples with solutions.
 
-(Note that the Identification number is unique)  
+<img width="786" height="614" alt="musical" src="https://github.com/user-attachments/assets/f4cd9b52-8bc5-477f-a87d-14200805ef45" />
 
 Problem 1
 Musicana Records has decided to store information on musicians who perform on their albums in a database. 
@@ -20,4 +20,57 @@ and an album identifier.
 
 Design a conceptual schema for Musicana. Be sure to indicate all keys and cardinality 
 constraints and any assumptions that you make.
-	
+	1. Entities & Attributes
+🎤 Musician
+MusicianID (PK)
+Name
+Street
+City
+Phone
+🎸 Instrument
+InstrumentName (PK)
+MusicalKey
+💿 Album
+AlbumID (PK)
+Title (UNIQUE)
+CopyrightDate
+🎵 Song
+SongTitle (PK)
+Author
+🔗 2. Relationships & Cardinality
+1. Plays (Musician ↔ Instrument)
+Relationship: Many-to-Many (M:N)
+Description:
+A musician may play multiple instruments
+An instrument may be played by multiple musicians
+
+👉 Representation:
+
+Musician (M) —— Plays —— (M) Instrument
+2. Contains (Album ↔ Song)
+Relationship: One-to-Many (1:M)
+Description:
+An album contains multiple songs
+Each song belongs to exactly one album
+
+👉 Representation:
+
+Album (1) —— Contains —— (M) Song
+3. Performs (Musician ↔ Song)
+Relationship: Many-to-Many (M:N)
+Description:
+A musician performs multiple songs
+Each song is performed by one or more musicians
+
+👉 Representation:
+
+Musician (M) —— Performs —— (M) Song
+
+⚠️ Constraint:
+
+Minimum participation on the Song side = 1 (Total Participation)
+4. Produces (Musician ↔ Album)
+Relationship: One-to-Many (1:M)
+Description:
+Each album has exactly one producer (a musician)
+A musician may produce multiple albums
